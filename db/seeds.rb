@@ -8,4 +8,15 @@
 Ingredient.create(name: "lemon")
 Ingredient.create(name: "ice")
 Ingredient.create(name: "mint leaves")
+Ingredient.create(name: "sugar")
+Ingredient.create(name: "seltzer water")
+Ingredient.create(name: "vodka")
+Ingredient.create(name: "coconut sake")
+Ingredient.create(name: "kahlua")
 
+
+
+Cocktail.create(name: 'Screwdriver')
+Cocktail.create(name: 'Mojito')
+Cocktail.create(name: 'Pacific Cloud')
+Cocktail.create(name: 'Unicorn Kiss')
