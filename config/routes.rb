@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :cocktails do
     resources :doses, only: [:create,:new]
   end
-  resources :doses, only: :delete
+  resources :doses, only: :destroy
   #get cocktails =>index
   #get cocktails/:id => def show @cocktail = Cocktail.find(:id) @cocktail.ingredients
   #get cocktails/new = new
