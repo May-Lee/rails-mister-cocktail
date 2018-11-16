@@ -1,15 +1,14 @@
-<div>
-<div><%= "Here's the cocktail!" %></div>
-<div><%= @cocktail.name %></div>
+<div class="container">
+<h2><%= @cocktail.name %></h2>
 <div><%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %></div>
 
-<div><%= "here's the ingredients and their doses" %></div>
+<div><h3><%= "Ingredients" %></h3></div>
   <% @cocktail.doses.each do |dose| %>
     <div><%= dose.ingredient.name %> (<%= dose.description %>) <%= link_to "🗑", dose_path(dose), method: :delete %></div>
   <% end %>
 
 <div>
-<h2>Add an ingredient</h2>
+<h3>Add an ingredient</h3>
 <%= render 'doses/form', cocktail: @cocktail, dose: @dose %>
 
 <%= link_to "Back to Cocktails", cocktails_path %>

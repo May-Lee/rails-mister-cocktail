@@ -1,10 +1,17 @@
-<%= cl_image_tag("https://res.cloudinary.com/dcjfhbk0f/image/upload/v1542367838/acjv0dzx7gqq0jx2ovti.jpg",
-      width: 400, height: 300, crop: :fill) %>
-<h1>My list of cocktails</h1>
+<div class="container">
+<div>
+<%= cl_image_tag("https://res.cloudinary.com/dcjfhbk0f/image/upload/v1542367838/acjv0dzx7gqq0jx2ovti.jpg") %>
+</div>
+<h1 class="text-center" text-color="white">Holy Shit Cocktails!</h1>
+
 <% @cocktails.each do |cocktail| %>
-  <h2><%= link_to cocktail.name , cocktail_path(cocktail[:id])%><%= link_to "🗑", cocktail_path(cocktail), method: :delete %>
+<div class="col-xs-4">
+  <h2 class="text-center"><%= link_to cocktail.name , cocktail_path(cocktail[:id])%><%= link_to " 🗑", cocktail_path(cocktail), method: :delete %>
 </h2>
+</div>
 <% end %>
-<br></br>
+</div>
+
 <%= link_to "Add a Cocktail", new_cocktail_path %>
+</div>
 
