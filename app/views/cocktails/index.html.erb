@@ -8,14 +8,25 @@
    </div>
 </div>
 <div class="container">
+<div class="tagline">
 <h1 class="text-center">Humans find cocktails delicious!</h1>
+</div>
+<div class="cards">
 <% @cocktails.each do |cocktail| %>
-  <div class="col-xs-4">
-    <h2 class="text-center"><%= link_to cocktail.name , cocktail_path(cocktail[:id])%><%= link_to " 🗑", cocktail_path(cocktail), method: :delete %>
-    </h2>
+  <div class="col-xs-6">
+    <div class="card">
+      <h3 class="text-center"><%= link_to cocktail.name , cocktail_path(cocktail[:id])%>
+      <%= cl_image_tag cocktail.photo, height: 200, width: 200, crop: :fill %>
+
+      <h3>
+        <%= link_to " 🗑", cocktail_path(cocktail), method: :delete %>
+      </h3>
+    </div>
   </div>
 <% end %>
-
 </div>
+</div>
+<div id="footer">
 <%= render 'footer' %>
+</div>
 

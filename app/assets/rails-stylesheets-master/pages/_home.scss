@@ -20,12 +20,18 @@ h2 {
 .text-center {
   text-align: center;
 }
-ul {
+ul > li {
   list-style-type: none;
   text-decoration: none;
 }
 
 a {
   text-decoration: none;
+}
+.tagline {
+  margin: 30px 20px;
+}
+.wrapper-grey {
+  background-color: black;
 }
 // Specific CSS for your home-page
