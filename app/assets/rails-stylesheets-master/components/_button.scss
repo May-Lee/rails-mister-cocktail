@@ -1,0 +1,20 @@
+.btn-vin-vid {
+   color: #0FFF95;
+   border: 3px solid #0FFF95;
+   font-size: 36px;
+   padding: 12px 36px;
+   margin: 30px 30px;
+   display: inline-block;
+   transition: ease 0.3s;
+   background: 0;
+
+}
+
+.btn-vin-vid:hover {
+  background: rgba(213, 173, 200, 0.3);
+  color: #0FFF95;
+  border: 3px solid #0FFF95;
+  box-shadow: 0 4px 8px 0 rgba(213, 173, 200, 0.7), 0 6px 20px 0 rgba(213, 173, 200, 0.7);
+
+}
+

@@ -1,0 +1,18 @@
+element.style {
+    background-image: linear-gradient(-180deg, rgba(71,119,151,0.6) 0%, rgba(74,21,81,0.6) 50%);
+}
+
+.banner {
+    color: #0FFF95;;
+    text-align: center;
+    height: 100vh;
+    background-size: cover;
+    background-image: url('');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-content {
+  display: inline-block;
+}

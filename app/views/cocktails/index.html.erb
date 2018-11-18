@@ -1,16 +1,21 @@
-<div class="container">
-<div class="banner">
-<%= cl_image_tag("https://res.cloudinary.com/dcjfhbk0f/image/upload/v1542367838/acjv0dzx7gqq0jx2ovti.jpg") %>
-<div class="wrapper" ><%= link_to new_cocktail_path do %><button class="btn btn-primary">Let's Make a Cocktail!</button><%end%></div>
-</div>
-<h1 class="text-center">Holy Shit Cocktails!</h1>
 
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(71, 119, 151, 0.6) 0%, rgba(74, 21, 81, 0.6) 50%), url('https://res.cloudinary.com/dcjfhbk0f/image/upload/v1542367838/acjv0dzx7gqq0jx2ovti.jpg');>
+   <div class="banner-content">
+    <div class="container">
+      <h1 class="text-center">HOLY SHIT COCKTAILS!!</h1>
+      <%= link_to new_cocktail_path do %><button class="btn-vin-vid">Let's Make a Cocktail!</button><%end%>
+    </div>
+   </div>
+</div>
+<div class="container">
+<h1 class="text-center">Humans find cocktails delicious!</h1>
 <% @cocktails.each do |cocktail| %>
-<div class="col-xs-4">
-  <h2 class="text-center"><%= link_to cocktail.name , cocktail_path(cocktail[:id])%><%= link_to " 🗑", cocktail_path(cocktail), method: :delete %>
-</h2>
-</div>
+  <div class="col-xs-4">
+    <h2 class="text-center"><%= link_to cocktail.name , cocktail_path(cocktail[:id])%><%= link_to " 🗑", cocktail_path(cocktail), method: :delete %>
+    </h2>
+  </div>
 <% end %>
+
 </div>
-</div>
+<%= render 'footer' %>
 
